@@ -1,1 +1,42 @@
-<script></script>
+<?php
+echo '<script type="text/javascript">';
+$numLayers = 2;
+for($x = 0; $x < $numLayers; $x++){
+  echo 'var character_W_0 = [';
+
+  $filename = "W_".$x;
+  $file = fopen($filename, 'r');
+  $skip = True;
+  $arrays = array();
+  $array = array();
+  $value = "";
+  for($byte = 0; $byte < filesize($filename); $byte++){
+    $chr = fread($file, 1);
+    if($chr == " "){
+      $array[] = $value;
+      $value = "";
+    } else if( $chr == "\n" ){
+      $arrays[] = $array;
+      $array = array();
+    } else {
+      $value = $value . $chr
+    }
+  for($array_num = 0; $array_num < count($arrays); $array_num++){
+    if($array_num != 0){
+      echo ',\n';
+    }
+    echo '[';
+    for($index = 0; $index < count($arrays[$array_num]); $index++){
+      if($index != 0){
+        echo ', ';
+      }
+      echo $arrays[$array_num][$index];
+    }
+    echo ']';
+  }
+  echo '];';
+  fclose($filename);
+}
+
+echo '</script>';
+?>

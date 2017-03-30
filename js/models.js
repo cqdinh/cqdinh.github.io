@@ -1,52 +1,43 @@
 var models = {};
-models["character"] = {
+models["word"] = {
   lstms: [
     {
-      weights: [
-        [],
-        []
-        ],
-      biases: []
+      weights: word_W_0,
+      biases: word_b_0;
+    },
+    {
+      weights: word_W_1,
+      biases: word_b_1
     }
   ],
   softmax: {
-    weights: [
-        [],
-        []
-        ],
-      biases: []
+    weights: word_softmax_W,
+      biases: word_softmax_b
   },
-  embeddings: [
-  [],
-  [],
-  ],
-  encoder: {
-  
-  },
-  decoder: [],
+  embeddings: word_embeddings,
+  encoder: word_encoder,
+  decoder: word_decoder,
   width: 128,
   depth: 2
 }
-models["word"] = {
-  weights: [
-  [
-    [],
-    []
-    ],
-  [
-    [],
-    []
-    ],
+models["character"] = {
+  lstms: [
+    {
+      weights: character_W_0,
+      biases: character_b_0;
+    },
+    {
+      weights: character_W_1,
+      biases: character_b_1
+    }
   ],
-  biases: [],
-  embeddings: [
-  [],
-  [],
-  ],
-  encoder: {
-  
+  softmax: {
+    weights: character_softmax_W,
+      biases: character_softmax_b
   },
-  decoder: [],
+  embeddings: character_embeddings,
+  encoder: character_encoder,
+  decoder: character_decoder,
   width: 128,
   depth: 2
 }

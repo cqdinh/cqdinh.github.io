@@ -1,16 +1,21 @@
 var models = {};
 models["character"] = {
-  weights: [
-  [
-    [],
-    []
-    ],
-  [
-    [],
-    []
-    ],
+  lstms: [
+    {
+      weights: [
+        [],
+        []
+        ],
+      biases: []
+    }
   ],
-  biases: [],
+  softmax: {
+    weights: [
+        [],
+        []
+        ],
+      biases: []
+  },
   embeddings: [
   [],
   [],

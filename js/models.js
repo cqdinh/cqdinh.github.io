@@ -1,33 +1,47 @@
-var weights = [];
-var biases = [];
-var embeddings = [];
-var encoders = [];
-var decoders = [];
-var hidden_sizes = []
-var state_sizes = [];
-var depths = [];
-
-weights["word"] = [
-  
-  ];
-biases["word"] = [
+var models = {};
+models["character"] = {
+  weights: [
+  [
+    [],
+    []
+    ],
+  [
+    [],
+    []
+    ],
+  ],
+  biases: [],
+  embeddings: [
   [],
-  []
-  ];
-embeddings["word"] = [
   [],
-  []
-  ];
-encoders["word"] = [
+  ],
+  encoder: {
   
-  ];
-decoders["word"] = [
+  },
+  decoder: [],
+  width: 128,
+  depth: 2
+}
+models["word"] = {
+  weights: [
+  [
+    [],
+    []
+    ],
+  [
+    [],
+    []
+    ],
+  ],
+  biases: [],
+  embeddings: [
+  [],
+  [],
+  ],
+  encoder: {
   
-  ];
-hidden_sizes["word"] = [
-  
-  ];
-state_sizes["word"] = [
-  
-  ];
-depths["word"] = 2;
+  },
+  decoder: [],
+  width: 128,
+  depth: 2
+}

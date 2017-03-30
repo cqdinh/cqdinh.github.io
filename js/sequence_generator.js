@@ -1,3 +1,21 @@
+
+function softmax(x){
+    
+    var result = [];
+    var e_z = [];
+    for(var i = 0; i < x.length; i++){
+        e_z.push(Math.exp(x[i]));
+    }
+    var sum = 0;
+    for(var i = 0; i < x.length; i++){
+        sum += e_z[i];
+    }
+    for(var i = 0; i < x.length; i++){
+        result.push(e_z[i] / sum);
+    }
+    return result;
+}
+
 function sigmoid(x){
     var result = [];
     for(var i = 0; i < x.length; i++){
@@ -30,13 +48,15 @@ function padd(a, b){
     return result;
 }
 
-function lstm(x, h, c, w, b, forget_bias=1.0){
+function lstm(x, h, c, lstm, forget_bias=1.0){
+    var w = lstm.weights
+    var b = lstm.biases
     var input = x.concat(h);
     var i = [];
     var j = [];
     var f = [];
     var o = [];
-    var out_size = b.length;
+    var out_size = b.length / 4;
     for(var row_num = 0; row_num < out_size; row_num++){
         i.push(b[row_num]);
         j.push(b[row_num]);
@@ -56,14 +76,27 @@ function lstm(x, h, c, w, b, forget_bias=1.0){
     return [new_h, new_c];  
 }
 
-function lstm_stack(x, h_array, c_array, w_array, b_array, forget_bias=1.0, num_layers=-1, in_place=false){
+function softmaxLayer(x, layer){
+    var result = [];
+    var val = 0;
+    for (var row = 0; row < layer.biases.length; row++){
+        val = layer.biases[row];
+        for(var col = 0; col < x.length; col++){
+            val += x[col] * layer.weights[row][col];
+        }
+        result.push(val);
+    }
+    return softmax(result);
+}
+
+function lstm_stack(x, h_array, c_array, lstms, forget_bias=1.0, num_layers=-1, in_place=false){
     var vector = x;
     if (!in_place){
         var h = [];
         var c = [];
     }
     for(var layer = 0; num_layers < 0 || layer < num_layers; layer++){
-        var results = lstm(vector, h_array[layer], c_array[layer], w_array[layer], b_array[layer], forget_bias);
+        var results = lstm(vector, h_array[layer], c_array[layer], lstms[layer], forget_bias);
         if(in_place){
             h_array[layer] = results[0];
             c_array[layer] = results[1];
@@ -79,13 +112,11 @@ function lstm_stack(x, h_array, c_array, w_array, b_array, forget_bias=1.0, num_
     return [vector, h, c];
 }
 
-function zero_state(layer_widths){
+function zero_state(model){
     var c = [];
-    var width;
-    for(var i = 0; i < layer_widths.length; i++){
-        width = layer_widths[i];
+    for(var i = 0; i < model.depth; i++){
         c.push([]);
-        for(var j = 0; j < width; j++){
+        for(var j = 0; j < model.width; j++){
             c[c.length - 1].push(0);
         }
     }
@@ -98,10 +129,8 @@ function searchsorted(a, v){
     var index = (min_index + max_index) / 2 | 0;
     var val;
     
-    while (min_index <= max_index){
-        val = a[index];
-        
-        if (element < v) {
+    while (min_index <= max_index){        
+        if (a[index] < v) {
             min_index = index + 1;
         } else {
             max_index = index
@@ -117,14 +146,7 @@ function sample(){
     var sample_size = parseInt(document.getElementById("sample_size").value);
     var sample_seed = document.getElementById("sample_seed").value;
     var sample_array = [''];
-    var embedding = embeddings[sample_type];
-    var weight = weights[sample_type];
-    var bias = biases[sample_type];
-    var encoder = encoders[sample_type];
-    var decoder = decoders[sample_type];
-    var hidden_size = hidden_sizes[sample_type];
-    var state_size = state_sizes[sample_type];
-    var depth = depths[sample_type];
+    var model = models[sample_type];
     var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var split_seed = sample_seed.split('');
     var chr;
@@ -142,16 +164,16 @@ function sample(){
     for(var i = 0; i < sample_array.length; i++){
         var str = sample_array[i]
         if(str != ''){
-            sample_vectors.push(embedding[decoder[str]]);
+            sample_vectors.push(model.embeddings[model.decoder[str]]);
         }
     }
     var sample = sample_seed;
-    var h = zero_state(hidden_size);
-    var c = zero_state(state_size);
+    var h = zero_state(model);
+    var c = zero_state(model);
     var result;
     var vec;
     for(var i = 0; i < sample_vectors.length; i++){
-        result = lstm_stack(sample_vectors[i], h, c, weight, bias, 1, -1, true);
+        result = lstm_stack(sample_vectors[i], h, c, model.weights, model.biases, 1, -1, true);
     }
     var probs;
     var cum_probs;
@@ -159,7 +181,7 @@ function sample(){
     var chosen;
     var resnum;
     for(var i = 0; i < sample_size; i++){
-        probs = lstm_stack(result, h, c, weight, bias, 1, -1, true);
+        probs = softmax_layer(lstm_stack(result, h, c, model.lstms, 1, -1, true), model.softmax);
         cum_probs = [probs[0]];
         sum = probs[0];
         for(var j = 1; j < probs.length; j++){
@@ -168,8 +190,8 @@ function sample(){
         }
         chosen = Math.random() * sum;        
         resnum = searchsorted(cum_probs, chosen);
-        result = embedding[resnum];
-        sample.concat(decoder[resnum]);
+        result = model.embeddings[resnum];
+        sample.concat(model.decoder[resnum]);
     }
     document.getElementById('results').innerHTML = sample;
 }

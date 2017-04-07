@@ -1,9 +1,0 @@
-var character_W_0;
-var character_b_0;
-var character_W_1;
-var character_b_1;
-var character_softmax_W;
-var character_softmax_b;
-var character_embeddings;
-var character_encoder;
-var character_decoder;

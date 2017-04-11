@@ -113,12 +113,14 @@ function lstm_stack(x, h_array, c_array, lstms, forget_bias=1.0, num_layers=-1, 
 }
 
 function zero_state(model){
+    console.log("Generating Zero State");
     var c = [];
     for(var i = 0; i < model.depth; i++){
         c.push([]);
         for(var j = 0; j < model.width; j++){
             c[c.length - 1].push(0);
         }
+        console.log(c[c.length - 1].toString());
     }
     return c;
 }
@@ -170,8 +172,6 @@ function sample(){
     var sample = sample_seed;
     var h = zero_state(model);
     var c = zero_state(model);
-    console.log(h);
-    console.log(c);
     var result;
     var vec;
     for(var i = 0; i < sample_vectors.length; i++){

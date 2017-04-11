@@ -173,7 +173,7 @@ function sample(){
     var result;
     var vec;
     for(var i = 0; i < sample_vectors.length; i++){
-        result = lstm_stack(sample_vectors[i], h, c, model.weights, model.biases, 1, -1, true);
+        result = lstm_stack(sample_vectors[i], h, c, model.lstms, 1, -1, true);
     }
     var probs;
     var cum_probs;

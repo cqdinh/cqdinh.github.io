@@ -170,6 +170,8 @@ function sample(){
     var sample = sample_seed;
     var h = zero_state(model);
     var c = zero_state(model);
+    console.log(h);
+    console.log(c);
     var result;
     var vec;
     for(var i = 0; i < sample_vectors.length; i++){

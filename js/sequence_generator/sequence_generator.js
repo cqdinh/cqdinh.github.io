@@ -130,7 +130,6 @@ function sample(){
     var sample_type_select = document.getElementById("sample_type");
     var sample_type = sample_type_select.options[sample_type_select.selectedIndex].value;
     var sample_size = parseInt(document.getElementById("sample_size").value);
-    console.log(sample_size);
     var sample_seed = document.getElementById("sample_seed").value;
     var sample_array = [''];
     var model = models[sample_type];
@@ -171,7 +170,6 @@ function sample(){
     for(var i = 0; i < sample_size; i++){
         lstm_output = lstm_stack(result, h, c, model.lstms, 1, -1, true);
         probs = softmaxLayer(lstm_output, model.softmax);
-        console.log(probs.toString());
         //cum_probs = [probs[0]];
         var max = 0;
         for(var j = 1; j < probs.length; j++){
@@ -179,10 +177,10 @@ function sample(){
             if (probs[j] > probs[max]){
                 max = j;   
             }
+            console.log(probs[max]);
         }
         result = model.embeddings[max];
         final_sample.concat(model.decoder[max]);
-        console.log(final_sample);
     }
     document.getElementById('results').innerHTML = final_sample;
 }

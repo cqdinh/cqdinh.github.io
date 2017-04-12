@@ -81,13 +81,14 @@ function softmaxLayer(x, layer){
     var val = 0;
     for (var row = 0; row < layer.biases.length; row++){
         val = layer.biases[row];
+        console.log(val);
         for(var col = 0; col < x.length; col++){
             val += x[col] * layer.weights[row][col];
+            console.log(val);
         }
+        console.log(val);
         result.push(val);
     }
-    console.log(result.toString());
-    console.log(softmax(result).toString());
     return softmax(result);
 }
 

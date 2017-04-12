@@ -177,11 +177,11 @@ function sample(){
             if (probs[j] > probs[max]){
                 max = j;   
             }
-            console.log(probs[max], max, model.decoder[max]);
         }
         console.log("Final: ", probs[max], max, model.decoder[max]);
         result = model.embeddings[max];
         final_sample.concat(model.decoder[max]);
+        console.log(final_sample);
     }
     document.getElementById('results').innerHTML = final_sample;
 }

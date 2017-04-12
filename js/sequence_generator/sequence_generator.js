@@ -57,11 +57,11 @@ function lstm(x, h, c, lstm, forget_bias=1.0){
     var f = [];
     var o = [];
     var out_size = b.length / 4;
-    console.log(input.toString());
     for(var row_num = 0; row_num < out_size; row_num++){
         i.push(b[row_num]);
         j.push(b[row_num]);
         f.push(b[row_num] + forget_bias);
+        console.log(f[0].toString());
         o.push(b[row_num]);
         for(var n = 0; n < input.length; n++){
             i[i.length-1] += input[n] * w[row_num + out_size * 0][n];

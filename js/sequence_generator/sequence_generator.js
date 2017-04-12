@@ -187,16 +187,14 @@ function sample(){
     var resnum;
     for(var i = 0; i < sample_size; i++){
         probs = softmaxLayer(lstm_stack(result, h, c, model.lstms, 1, -1, true), model.softmax);
-        cum_probs = [probs[0]];
-        sum = probs[0];
+        max = 0;
         for(var j = 1; j < probs.length; j++){
-            sum += probs[j];
-            cum_probs.push(sum);
+            if (probs[j] > probs[max]){
+                max = j;   
+            }
         }
-        chosen = Math.random() * sum;        
-        resnum = searchsorted(cum_probs, chosen);
-        result = model.embeddings[resnum];
-        sample.concat(model.decoder[resnum]);
+        result = model.embeddings[max];
+        sample.concat(model.decoder[max]);
     }
     document.getElementById('results').innerHTML = sample;
 }

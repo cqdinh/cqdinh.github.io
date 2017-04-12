@@ -161,13 +161,17 @@ function sample(){
     for(var i = 0; i < sample_vectors.length; i++){
         result = lstm_stack(sample_vectors[i], h, c, model.lstms, 1, -1, true);
     }
+    var lstm_output;
     var probs;
     var cum_probs;
     var sum;
     var chosen;
     var resnum;
     for(var i = 0; i < sample_size; i++){
-        probs = softmaxLayer(lstm_stack(result, h, c, model.lstms, 1, -1, true), model.softmax);
+        lstm_output = lstm_stack(result, h, c, model.lstms, 1, -1, true);
+        probs = softmaxLayer(lstm_output, model.softmax);
+        console.log(result.toString());
+        console.log(lstm_output.toString());
         console.log(probs.toString());
         max = 0;
         for(var j = 1; j < probs.length; j++){

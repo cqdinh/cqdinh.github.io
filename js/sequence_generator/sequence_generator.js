@@ -177,7 +177,7 @@ function sample(){
             if (probs[j] > probs[max]){
                 max = j;   
             }
-            console.log(probs[max]);
+            console.log(probs[max], max);
         }
         result = model.embeddings[max];
         final_sample.concat(model.decoder[max]);

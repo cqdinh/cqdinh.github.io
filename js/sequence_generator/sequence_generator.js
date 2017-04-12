@@ -132,7 +132,9 @@ function searchsorted(a, v){
     var index = (min_index + max_index) / 2 | 0;
     var val;
     
-    while (min_index <= max_index){        
+    while (min_index <= max_index){     
+        console.log(min_index);
+        console.log(max_index);
         if (a[index] < v) {
             min_index = index + 1;
         } else {

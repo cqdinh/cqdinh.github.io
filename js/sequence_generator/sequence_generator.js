@@ -171,12 +171,12 @@ function sample(){
         max = 0;
         for(var j = 1; j < probs.length; j++){
             if (probs[j] > probs[max]){
+                console.log(probs[max]);
                 max = j;   
             }
         }
         result = model.embeddings[max];
         sample.concat(model.decoder[max]);
-        console.log(max);
     }
     document.getElementById('results').innerHTML = sample;
 }

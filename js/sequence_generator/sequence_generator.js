@@ -184,7 +184,7 @@ function sample(){
     var chosen;
     var resnum;
     for(var i = 0; i < sample_size; i++){
-        probs = softmax_layer(lstm_stack(result, h, c, model.lstms, 1, -1, true), model.softmax);
+        probs = softmaxLayer(lstm_stack(result, h, c, model.lstms, 1, -1, true), model.softmax);
         cum_probs = [probs[0]];
         sum = probs[0];
         for(var j = 1; j < probs.length; j++){

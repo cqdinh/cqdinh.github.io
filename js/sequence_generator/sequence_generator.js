@@ -164,10 +164,9 @@ function sample(){
     for(var i = 0; i < sample_array.length; i++){
         var str = sample_array[i]
         if(str != ''){
-            sample_vectors.push(model.embeddings[model.decoder[str]]);
+            sample_vectors.push(model.embeddings[model.encoder[str]]);
         }
     }
-    console.log(model.decoder.toString());
     var sample = sample_seed;
     var h = zero_state(model);
     var c = zero_state(model);

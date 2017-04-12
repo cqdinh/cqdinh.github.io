@@ -126,25 +126,6 @@ function zero_state(model){
     return c;
 }
 
-function searchsorted(a, v){
-    var min_index = 0;
-    var max_index = a.length - 1;
-    var index = (min_index + max_index) / 2 | 0;
-    var val;
-    
-    while (min_index <= max_index){     
-        console.log(min_index);
-        console.log(max_index);
-        if (a[index] < v) {
-            min_index = index + 1;
-        } else {
-            max_index = index
-        }
-        index = (min_index + max_index) / 2 | 0;
-    }
-    return index
-}
-
 function sample(){
     var sample_type_select = document.getElementById("sample_type");
     var sample_type = sample_type_select.options[sample_type_select.selectedIndex].value;

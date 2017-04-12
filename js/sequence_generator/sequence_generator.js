@@ -86,7 +86,6 @@ function softmaxLayer(x, layer){
         }
         result.push(val);
     }
-    console.log(result.toString());
     return softmax(result);
 }
 
@@ -171,6 +170,7 @@ function sample(){
     for(var i = 0; i < sample_size; i++){
         lstm_output = lstm_stack(result, h, c, model.lstms, 1, -1, true);
         probs = softmaxLayer(lstm_output, model.softmax);
+        console.log(probs.toString());
         //cum_probs = [probs[0]];
         var max = 0;
         for(var j = 1; j < probs.length; j++){

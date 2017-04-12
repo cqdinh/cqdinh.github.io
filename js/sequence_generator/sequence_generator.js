@@ -57,6 +57,7 @@ function lstm(x, h, c, lstm, forget_bias=1.0){
     var f = [];
     var o = [];
     var out_size = b.length / 4;
+    console.log(input.toString());
     for(var row_num = 0; row_num < out_size; row_num++){
         i.push(b[row_num]);
         j.push(b[row_num]);
@@ -173,7 +174,6 @@ function sample(){
     var result;
     var vec;
     for(var i = 0; i < sample_vectors.length; i++){
-        console.log(sample_vectors[i].toString());
         result = lstm_stack(sample_vectors[i], h, c, model.lstms, 1, -1, true);
     }
     var probs;

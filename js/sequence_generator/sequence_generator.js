@@ -176,7 +176,7 @@ function sample(){
         }
         result = model.embeddings[max];
         sample.concat(model.decoder[max]);
-        console.log(model.decoder[max]);
+        console.log(max);
     }
     document.getElementById('results').innerHTML = sample;
 }

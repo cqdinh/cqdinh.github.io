@@ -153,7 +153,7 @@ function sample(){
             sample_vectors.push(model.embeddings[model.encoder[str]]);
         }
     }
-    var sample = sample_seed;
+    var final_sample = sample_seed;
     var h = zero_state(model);
     var c = zero_state(model);
     var result;
@@ -180,9 +180,10 @@ function sample(){
             }
         }
         result = model.embeddings[max];
-        sample.concat(model.decoder[max]);
+        final_sample.concat(model.decoder[max]);
+        console.log(final_sample);
     }
-    document.getElementById('results').innerHTML = sample;
+    document.getElementById('results').innerHTML = final_sample;
 }
 
 function init(){

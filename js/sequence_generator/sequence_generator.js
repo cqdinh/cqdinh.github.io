@@ -90,6 +90,7 @@ function softmaxLayer(x, layer){
 }
 
 function lstm_stack(x, h_array, c_array, lstms, forget_bias=1.0, num_layers=-1, in_place=false){
+    console.log(lstms.length);
     var vector = x;
     if (!in_place){
         var h = [];

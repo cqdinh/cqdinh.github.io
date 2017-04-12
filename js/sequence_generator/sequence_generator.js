@@ -168,10 +168,10 @@ function sample(){
     var resnum;
     for(var i = 0; i < sample_size; i++){
         probs = softmaxLayer(lstm_stack(result, h, c, model.lstms, 1, -1, true), model.softmax);
+        console.log(probs.toString());
         max = 0;
         for(var j = 1; j < probs.length; j++){
             if (probs[j] > probs[max]){
-                console.log(probs[max]);
                 max = j;   
             }
         }

@@ -130,6 +130,7 @@ function sample(){
     var sample_type_select = document.getElementById("sample_type");
     var sample_type = sample_type_select.options[sample_type_select.selectedIndex].value;
     var sample_size = parseInt(document.getElementById("sample_size").value);
+    console.log(sample_size);
     var sample_seed = document.getElementById("sample_seed").value;
     var sample_array = [''];
     var model = models[sample_type];

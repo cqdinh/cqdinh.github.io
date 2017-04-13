@@ -76,7 +76,7 @@ function lstm(x, h, c, lstm, forget_bias=1.0){
     return [new_h, new_c];  
 }
 
-function softmaxLayer(x, layer){
+function nnLayer(x, layer){
     var result = [];
     for (var row = 0; row < layer.biases.length; row++){
         result.push(layer.biases[row])
@@ -86,7 +86,7 @@ function softmaxLayer(x, layer){
             result[i] += x[j] * layer.weights[j][i];
         }
     }
-    return softmax(result);
+    return result;
 }
 
 function lstm_stack(x, h_array, c_array, lstms, forget_bias=1.0, num_layers=-1, in_place=false){
@@ -162,6 +162,7 @@ function sample(){
         result = lstm_stack(sample_vectors[i], h, c, model.lstms, 1, -1, true);
     }
     var lstm_output;
+    var out_vals;
     var probs;
     var cum_probs;
     var sum;
@@ -169,7 +170,13 @@ function sample(){
     var resnum;
     for(var i = 0; i < sample_size; i++){
         lstm_output = lstm_stack(result, h, c, model.lstms, 1, -1, true);
-        probs = softmaxLayer(lstm_output, model.softmax);
+        out_vals = nnLayer(lstm_output, model.softmax);
+        probs = softmax(out_vals);
+        
+        console.log(lstm_output);
+        console.log(out_vals);
+        console.log(probs);
+        
         //cum_probs = [probs[0]];
         var max = 0;
         for(var j = 1; j < probs.length; j++){

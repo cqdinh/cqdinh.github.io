@@ -215,9 +215,3 @@ function sample(){
     document.getElementById('results').innerHTML = final_sample;
     console.log(document.getElementById('results').innerHTML);
 }
-
-function init(){
-    document.getElementById('sample-form').onsubmit = sample;
-}
-
-init();

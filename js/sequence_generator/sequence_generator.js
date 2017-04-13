@@ -64,9 +64,9 @@ function lstm(x, h, c, lstm, forget_bias=1.0){
         o.push(b[row_num]);
         for(var n = 0; n < input.length; n++){
             i[i.length-1] += input[n] * w[row_num][n + out_size * 0];
-            j[j.length-1] += input[n] * w[row_num][n + out_size * 0];
-            f[f.length-1] += input[n] * w[row_num][n + out_size * 0];
-            o[o.length-1] += input[n] * w[row_num][n + out_size * 0];
+            j[j.length-1] += input[n] * w[row_num][n + out_size * 1];
+            f[f.length-1] += input[n] * w[row_num][n + out_size * 2];
+            o[o.length-1] += input[n] * w[row_num][n + out_size * 3];
         }
     }
     
@@ -82,7 +82,7 @@ function softmaxLayer(x, layer){
     for (var row = 0; row < layer.biases.length; row++){
         val = layer.biases[row];
         for(var col = 0; col < x.length; col++){
-            val += x[col] * layer.weights[col][row];
+            val += x[col] * layer.weights[row][col];
         }
         result.push(val);
     }

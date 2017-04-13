@@ -57,7 +57,6 @@ function lstm(x, h, c, lstm, forget_bias=1.0){
     var f = [];
     var o = [];
     var out_size = b.length / 4;
-    console.log(w.length, w[0].length);
     for(var row_num = 0; row_num < out_size; row_num++){
         i.push(b[row_num]);
         j.push(b[row_num]);
@@ -83,7 +82,7 @@ function softmaxLayer(x, layer){
     for (var row = 0; row < layer.biases.length; row++){
         val = layer.biases[row];
         for(var col = 0; col < x.length; col++){
-            val += x[col] * layer.weights[row][col];
+            val += x[col] * layer.weights[col][row];
         }
         result.push(val);
     }

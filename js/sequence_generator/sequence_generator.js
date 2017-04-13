@@ -1,5 +1,13 @@
 function weighted_pick(probs){
-    return val;
+    var sum = 0;
+    var rand = Math.random();
+    for( var i = 0; i < probs.length; i++){
+        sum += probs[i];
+        if (rand <= sum) {
+            return i;
+        }
+    }
+    return probs.length - 1;
 }
 
 

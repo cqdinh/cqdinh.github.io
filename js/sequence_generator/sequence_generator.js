@@ -175,11 +175,11 @@ function sample(){
         for(var j = 1; j < probs.length; j++){
             //cum_probs.push(cum_probs[cum_probs.length - 1] + probs[j]);
             if (probs[j] > probs[max]){
-                max = j;   
+                max = j;
             }
         }
         result = model.embeddings[max];
-        final_sample = final_sample.concat(model.decoder[max]);
+        final_sample = final_sample.concat(max.toString());//model.decoder[max]);
     }
     console.log("Final Sample: ", final_sample);
     document.getElementById('results').innerHTML = final_sample;

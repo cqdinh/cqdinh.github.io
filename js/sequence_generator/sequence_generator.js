@@ -57,6 +57,7 @@ function lstm(x, h, c, lstm, forget_bias=1.0){
     var f = [];
     var o = [];
     var out_size = b.length / 4;
+    console.log(w.length, w[0].length);
     for(var row_num = 0; row_num < out_size; row_num++){
         i.push(b[row_num]);
         j.push(b[row_num]);

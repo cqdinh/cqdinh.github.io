@@ -1,3 +1,7 @@
+function weighted_pick(probs){
+    return val;
+}
+
 
 function softmax(x){
     
@@ -193,20 +197,9 @@ function sample(){
         out_vals = nnLayer(lstm_output, model.softmax);
         probs = softmax(out_vals);
         
-        //cum_probs = [probs[0]];
-        var max = 0;
-        for(var j = 1; j < probs.length; j++){
-            //cum_probs.push(cum_probs[cum_probs.length - 1] + probs[j]);
-            if (probs[j] > probs[max]){
-                max = j;
-            }
-        }
-        console.log("h_0: ", h[0].toString());
-        console.log("c_0: ", c[0].toString());
-        console.log("h_1: ", h[0].toString());
-        console.log("c_1: ", c[0].toString());
-        result = model.embeddings[max];
-        final_sample = final_sample.concat(model.decoder[max]);
+        chosen = weighted_pick(probs);
+        result = model.embeddings[chosen];
+        final_sample = final_sample.concat(model.decoder[chosen]);
     }
     console.log("Final Sample: ", final_sample);
     document.getElementById('results').innerHTML = final_sample;

@@ -183,9 +183,10 @@ function sample(){
                 max = j;
             }
         }
-        console.log("Sample: ", max, probs[max], model.decoder[max]);
+        console.log("h: ", h);
+        console.log("c: ", c);
         result = model.embeddings[max];
-        final_sample = final_sample.concat(max.toString());//model.decoder[max]);
+        final_sample = final_sample.concat(model.decoder[max]);
     }
     console.log("Final Sample: ", final_sample);
     document.getElementById('results').innerHTML = final_sample;

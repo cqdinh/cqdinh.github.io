@@ -180,8 +180,8 @@ function sample(){
         }
         result = model.embeddings[max];
         final_sample = final_sample.concat(model.decoder[max]);
-        console.log("Current Sample: ", final_sample);
     }
+    console.log("Final Sample: ", final_sample);
     document.getElementById('results').innerHTML = final_sample;
 }
 

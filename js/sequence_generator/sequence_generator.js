@@ -188,11 +188,10 @@ function sample(){
     var final_sample = sample_seed;
     var h = zero_state(model);
     var c = zero_state(model);
-    var result;
-    var vec;
-    for(var i = 0; i < sample_vectors.length; i++){
-        result = lstm_stack(sample_vectors[i], h, c, model.lstms, 1, -1, true);
+    for(var i = 0; i < sample_vectors.length - 1; i++){
+        lstm_stack(sample_vectors[i], h, c, model.lstms, 1, -1, true);
     }
+    var result = sample_vectors[sample_vectors.length - 1];
     var lstm_output;
     var out_vals;
     var probs;

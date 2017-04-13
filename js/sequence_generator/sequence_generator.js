@@ -78,13 +78,13 @@ function lstm(x, h, c, lstm, forget_bias=1.0){
 
 function softmaxLayer(x, layer){
     var result = [];
-    var val = 0;
     for (var row = 0; row < layer.biases.length; row++){
-        val = layer.biases[row];
-        for(var col = 0; col < x.length; col++){
-            val += x[col] * layer.weights[col][row];
+        result.push(layer.biases[row])
+    }
+    for (var i = 0; i < layer.biases.length; i++){
+        for(var j = 0; j < x.length; j++){
+            result[i] += x[j] * layer.weights[j][i];
         }
-        result.push(val);
     }
     return softmax(result);
 }

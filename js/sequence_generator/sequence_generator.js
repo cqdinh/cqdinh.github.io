@@ -199,20 +199,18 @@ function sample(){
     var sum;
     var chosen;
     var resnum;
-    console.log("h_0: ", h[0]);
-    console.log("c_0: ", c[0]);
-    console.log("h_1: ", h[1]);
-    console.log("c_1: ", c[1]);
     for(var i = 0; i < sample_size; i++){
         lstm_output = lstm_stack(result, h, c, model.lstms, 1, -1, true);
         out_vals = nnLayer(lstm_output, model.softmax);
         probs = softmax(out_vals);
-        
-        
         chosen = weighted_pick(probs);
         result = model.embeddings[chosen];
         final_sample = final_sample.concat(model.decoder[chosen]);
     }
+    console.log("h_0: ", h[0]);
+    console.log("c_0: ", c[0]);
+    console.log("h_1: ", h[1]);
+    console.log("c_1: ", c[1]);
     console.log("Final Sample: ", final_sample);
     document.getElementById('results').innerHTML = final_sample;
     console.log(document.getElementById('results').innerHTML);

@@ -128,25 +128,43 @@ function zero_state(model){
     return c;
 }
 
+function split_seed(seed, mode){
+    var result;
+    if (mode == "character"){
+        result = seed.split('');   
+    } else if (mode == "word"){
+        var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var chars = seed.split('');
+        var chr;
+        result = [''];
+        for(var i = 0; i < seed.length; i++) {
+            chr = seed[i];
+            if(alphabet.includes(chr)){
+                    result[result.length - 1] = result[result.length - 1].concat(chr);
+            } else {
+                if (result[result.length - 1] == ''){
+                    result[result.length - 1] = result[result.length - 1].concat(chr);
+                } else {
+                    result.push(chr);
+                }
+                result.push('');
+            }
+        }
+        if (result[result.length - 1] == ''){
+            result.pop();
+        }
+    }
+    return result;
+}
+
 function sample(){
     var sample_type_select = document.getElementById("sample_type");
     var sample_type = sample_type_select.options[sample_type_select.selectedIndex].value;
     var sample_size = parseInt(document.getElementById("sample_size").value);
     var sample_seed = document.getElementById("sample_seed").value;
-    var sample_array = [''];
+    var sample_array = split_seed(sample_seed, sample_type);
     var model = models[sample_type];
-    var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var split_seed = sample_seed.split('');
-    var chr;
-    for(var i = 0; i < split_seed.length; i++) {
-        chr = split_seed[i];
-        if(alphabet.includes(chr)){
-            sample_array[sample_array.length - 1] = sample_array[sample_array.length - 1].concat(chr);
-        } else {
-            sample_array.push(chr);
-            sample_array.push('');
-        }
-    }
+
     var sample_vectors = [];
     var str;
     for(var i = 0; i < sample_array.length; i++){

@@ -178,6 +178,7 @@ function sample(){
                 max = j;
             }
         }
+        console.log("Sample: ", max, probs[max], model.decoder[max]);
         result = model.embeddings[max];
         final_sample = final_sample.concat(max.toString());//model.decoder[max]);
     }

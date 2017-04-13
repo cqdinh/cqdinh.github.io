@@ -200,11 +200,5 @@ function sample(){
         result = model.embeddings[chosen];
         final_sample = final_sample.concat(model.decoder[chosen]);
     }
-    console.log("h_0: ", h[0]);
-    console.log("c_0: ", c[0]);
-    console.log("h_1: ", h[1]);
-    console.log("c_1: ", c[1]);
-    console.log("Final Sample: ", final_sample);
     document.getElementById('results').innerHTML = final_sample;
-    console.log(document.getElementById('results').innerHTML);
 }

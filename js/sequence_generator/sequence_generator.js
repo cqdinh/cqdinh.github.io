@@ -64,26 +64,19 @@ function lstm(x, h, c, lstm, forget_bias=1.0){
     var w = lstm.weights
     var b = lstm.biases
     var input = x.concat(h);
-    var i = [];
-    var j = [];
-    var f = [];
-    var o = [];
-    var out_size = b.length / 4;
-    for(var row_num = 0; row_num < out_size; row_num++){
-        i.push(b[row_num]);
-        j.push(b[row_num]);
-        f.push(b[row_num] + forget_bias);
-        o.push(b[row_num]);
-    }
-    for(var row_num = 0; row_num < out_size; row_num++){
-        for(var n = 0; n < input.length; n++){
-            i[i.length-1] += input[n] * w[n][row_num + out_size * 0];
-            j[j.length-1] += input[n] * w[n][row_num + out_size * 1];
-            f[f.length-1] += input[n] * w[n][row_num + out_size * 2];
-            o[o.length-1] += input[n] * w[n][row_num + out_size * 3];
+    var res = []
+    for(var i = 0; i < b.length; i++){
+        res.push(b[i]);
+        for(var j = 0; j < input.length; j++){
+            res[res.length-1] += input[j] * w[j][i];
         }
     }
-    
+    var ij = res.slice(0, res.length / 2);
+    var fo = res.slice(res.length / 2);
+    var i = ij.slice(0, ij.length / 2);
+    var j = ij.slice(ij.length / 2);
+    var f = fo.slice(0, fo.length / 2);
+    var o = fo.slice(fo.length / 2);    
     var new_c = padd(pmul(c, sigmoid(f)), pmul(sigmoid(i), tanh(j)));
     var new_h = pmul(tanh(new_c), sigmoid(o));
     

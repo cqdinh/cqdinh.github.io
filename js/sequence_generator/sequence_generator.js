@@ -175,10 +175,6 @@ function sample(){
         out_vals = nnLayer(lstm_output, model.softmax);
         probs = softmax(out_vals);
         
-        console.log(lstm_output);
-        console.log(out_vals);
-        console.log(probs);
-        
         //cum_probs = [probs[0]];
         var max = 0;
         for(var j = 1; j < probs.length; j++){

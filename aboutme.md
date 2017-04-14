@@ -19,3 +19,6 @@ This past summer, I tested a system using IR communication and Arduino to implem
 The summer before that, I worked on a system for automatic wall detection and avoidance using a Raspberry Pi and a depth sensor that acted like a very low-resolution LIDAR. I prototyped the algorithm in Octave and then finalized it in Python using NumPy and MatPlotLib to analyze and visualize the data as well as to create a simulated test environment.
 
 My first summer at MantaroBot, I implemented additional communication pathways for the <a href="https://play.google.com/store/apps/details?id=com.mantaro.telemerobotappv3">MantaroBot TeleMe Robot App</a> and <a href="http://www.mantarobot.com/telego/">MantaroBot TeleGo Controller</a> to use.
+
+### Resume
+You can find my resume <a href="https://cqdinh.github.io/Resume.pdf">Here</a>

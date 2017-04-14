@@ -6,7 +6,7 @@ css: "/css/sequence_generator.css"
 A TensorFlow-based LSTM model that can be used to mimic a sequence of any form with a common input/output method for all data types. This implementation uses a modified LSTM class from TensorFlow to output the trained model in a simple text format, making cross-platform usage of the model simpler. Currently, I am working on implementing a simple GUI for training a model and sampling its generated output.
 
 <br><br>
-<h3>Demo: Model Trained on Shakespeare</h3>
+<h3>Demo: Pre-trained character-by-character model</h3>
 <table>
   <tr>
     <th>Options</th>
@@ -17,10 +17,9 @@ A TensorFlow-based LSTM model that can be used to mimic a sequence of any form w
          <!--<form class="sample-form" id="sample-form">-->
            <div class="row">
              <div class="col-xs-6">
-               Sample Type:
+               Training Data:
                <select id="sample_type">
-                 <option value="character">Characters</option>
-                 <option value="word">Words</option>
+                 <option value="shakespeare">Shakespeare</option>
                </select>
              </div>
            </div>

@@ -7,7 +7,7 @@ subtitle:
 Working towards a BS in Computer Science at the University of Maryland, Baltimore County with a minor in Math
 
 I think AI is cool, so I've been experimenting with it in my spare time. 
-See my projects <a href="cqdinh.github.io/projects#AI">Here</a>
+See my projects <a href="cqdinh.github.io/projects#AI">here</a>
 
 I've fallen in love with martial arts over the 12 years that I've been practicing Tae Kwon Do with parts of other styles thrown in.
 
@@ -21,4 +21,4 @@ The summer before that, I worked on a system for automatic wall detection and av
 My first summer at MantaroBot, I implemented additional communication pathways for the <a href="https://play.google.com/store/apps/details?id=com.mantaro.telemerobotappv3">MantaroBot TeleMe Robot App</a> and <a href="http://www.mantarobot.com/telego/">MantaroBot TeleGo Controller</a> to use.
 
 ### Resume
-You can find my resume <a href="https://cqdinh.github.io/Resume.pdf">Here</a>
+You can find my resume <a href="https://cqdinh.github.io/Resume.pdf">here</a>

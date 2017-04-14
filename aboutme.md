@@ -7,7 +7,7 @@ subtitle:
 Working towards a BS in Computer Science at the University of Maryland, Baltimore County with a minor in Math
 
 I think AI is cool, so I've been experimenting with it in my spare time. 
-See my projects <a href="cqdinh.github.io/projects#AI">here</a>
+See my projects <a href="https://cqdinh.github.io/projects#AI">here</a>
 
 I've fallen in love with martial arts over the 12 years that I've been practicing Tae Kwon Do with parts of other styles thrown in.
 

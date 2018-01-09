@@ -19,6 +19,8 @@ An example of this is if a taxi picks up a passenger and starts heading towards 
 #### Google CodeU
 Over the course of the spring 2017 semester, I participated in Google's CodeU program. This career development program consisted primarily of a 3-person group project with a Google engineer performing code reviews as our Project Advisor. In addition, there were three mock interviews so that I could get useful feedback as well as YouTube Live sessions with Google recruiters and engineers that covered various industry and career preparation topics. Finally, in the summer, I went to Google's CodeU Day event at the Googleplex which included talks and networking opportunities.
 
+The code for the group project that I worked on is available on my GitHub <a href="https://github.com/cqdinh/codeu_project_2017">here</a>
+
 #### MantaroBot
 I spent the summers of 2014, 2015, 2016, and 2017 interning at MantaroBot where I worked on various aspects of their telepresence robots.
 

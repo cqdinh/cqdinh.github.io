@@ -11,5 +11,5 @@ For my Data Science class, I entered the Kaggle competition to create a model th
 
 <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Kaggle Competition</a>
 
-<a href="https://github.com/cqdinh/kaggle_corporacion_favorita/blob/master/Learn_NN.ipynb">Code</a>
+<a href="https://github.com/cqdinh/kaggle_corporacion_favorita/blob/master/Learn_NN.ipynb">Jupyter Notebook</a>
 ### Other

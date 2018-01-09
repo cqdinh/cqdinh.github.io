@@ -10,5 +10,6 @@ A TensorFlow-based LSTM model that can be used to mimic a sequence of any form w
 For my Data Science class, I entered the Kaggle competition to create a model that forecasts product sales for Corporacion Favorita's Ecuadorian grocery stores. 
 
 <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Kaggle Competition</a>
+
 <a href="https://github.com/cqdinh/kaggle_corporacion_favorita">Code</a>
 ### Other

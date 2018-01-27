@@ -31,8 +31,8 @@ The problem that I am working on shows up when AMDPs are used online. Each sub-t
 As an analogy, I will use the task of going out for dinner. This can be broken down into such sub-tasks as "go to car", "drive to restaurant X", and "eat dinner". An offline usage of an AMDP would simply result in all of the steps needed to reach the car, how to drive to the restaurant, and how to eat. An online usage, however, would result in a system that tells you what to do step-by-step until you are done with your meal. A problem would arise if you decided on your way to restaurant X that you wanted to go to restaurant Y instead. Under the current system, you would be directed all the way to restaurant X before the AMDP realizes that you need to be taken to restaurant Y and then takes you there. My work is focused on fixing this problem so that as soon as you changed your mind, you are navigated to restaurant Y rather than needing to backtrack for no reason.
 
 The codebases that I am working from:
-<a href="https://github.com/cqdinh/amdp-replanning">github.com/cqdinh/amdp-replanning</a>
-<a href="https://github.com/cqdinh/Maple-RAMDP">github.com/cqdinh/Maple-RAMDP</a>
+* <a href="https://github.com/cqdinh/amdp-replanning">github.com/cqdinh/amdp-replanning</a>
+* <a href="https://github.com/cqdinh/Maple-RAMDP">github.com/cqdinh/Maple-RAMDP</a>
 
 ### MantaroBot Corporation - Summer Internship
 I interned at the MantaroBot Corporation in Germantown over the summers of 2014, 2015, 2016, and 2017.

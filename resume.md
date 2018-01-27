@@ -42,53 +42,41 @@ I also worked on making the chat server persistent across tests. Initially, all 
 In addition to this group project, I attended YouTube Live Career Series talks, which were livestreams hosted by Google recruiters and engineers covering industry and carrer preparation topics. Several mock interviews were also conducted in order to give participants in CodeU extra interview experience and feedback from people who conduct those interviews regularly.
 
 Finally, I attended an event at Google's headquarters in Mountain View that included some of the talks and exercises that are used to introduce new Google employees to the company as well as talks geared more explicitly towards students. Along with these talks, we were given time to network with Google employees who worked to create CodeU and with our fellow students.
-
+#### Skills Learned
+* Java Database Access
 ### MantaroBot Corporation - Summer Internship
 I interned at the MantaroBot Corporation in Germantown over the summers of 2014, 2015, 2016, and 2017.
 #### Summer 2017
 ##### Work Done
 I designed and implemented an algorithm that uses OpenCV to find the robot's position relative to a marker placed on its charging dock. Based on this position, the robot can then dock itself for charging automatically. The marker is made up of three triangles which are key to the algorithm. First, the algorithm finds a group of triangles that match the overall profile of the marker image. Once the triangles are found, their sizes and relative positions are used to determine how far away the marker is and its angle relative to the robot. To dock, the robot uses its mecanum wheels to move sideways and rotate so that it is directly in front of the charging station and can then simply move straight forward to dock. I used the Python version of OpenCV to speed up development of the marker detection algorithm and then used a C# wrapper of OpenCV to integrate it into the Windows controller app.
 ##### Skills Learned
-OpenCV
-
-Computer Vision basics
-
+* OpenCV
+* Computer Vision basics
 #### Summer 2016
 ##### Work Done
 I worked on prototyping a system using infrared sensors and transmitters to allow a robot to dock itself into its charging station. I used Arduino to control the sensors and transmitters along with Python to record and analyze the data that were produced. The prototype system was found to only be effective at very short range, which made it unsuitable for a docking system.
 
 Later, I implemented algorithms that minimize the stress placed on the joints of a robotic arm. There was an extra degree of freedom in the arm's movement, so I worked through the forwards kinematics and torque equations in order to determine how to position the arm given an endpoint to move to. However, based on a map of the stress on the arm that I created in MatPlotLib, I found that larger movements could not be performed reliably by moving in a straight line and a pathing algorithm was needed. In order to minimize the stress experienced throughout the path, I developed a system that determines what direction to move in at each step based on gradient descent. Both of these algorithms were prototyped in Python with NumPy and MatPlotLib and then implemented in C# as part of a Windows App that controls the robot.
 ##### Skills Learned
-C#
-
-Model-based Optimization
-
+* C#
+* Model-based Optimization
 #### Summer 2015
 ##### Work Done
 I worked on using an Asus XTION to imitate LIDAR-based robotic wall detection and avoidance. I used Octave, a free equivalent to MatLab, as well as NumPy and MatPlotLib to analyze and visualize data that was collected from the sensor. In addition, I used NumPy and MatPlotlib to prototype the detection and avoidance algorithms. 
 
 The final result was an algorithm that used variance to cluster data points into groups that indicate the existence of a wall. Using these groups, least-squares regressions calculate the location of the wall that each group represents while reducing noise. Finally, the robot's movements are biased towards avoiding walls by finding the nearest wall and moving away from it if necessary and parallel to it otherwise.
 ##### Skills Learned
-Octave
-
-NumPy
-
-MatPlotLib
-
-Noise Reduction techniques
-
-Basic Clustering
-
+* Octave
+* NumPy
+* MatPlotLib
+* Noise Reduction techniques
+* Basic Clustering
 #### Summer 2014
 ##### Work Done
 I implemented Pusher and WebRTC as additional methods by which commands from the <a href="http://www.mantarobot.com/telego/">TeleGo Controller</a> could reach the <a href="https://play.google.com/store/apps/details?id=com.mantaro.telemerobotappv3&hl=en">TeleMe Robot App</a>, which would relay those commands to the robot's motor controllers and other hardware. Pusher was implemented entirely in Java using the Android Development Kit, while WebRTC required HTML and Javascript as well as NodeJS for a server that was used to set up the peer-to-peer connection.
 ##### Skills Learned
-HTML
-
-Javascript
-
-NodeJS
-
-Android Development Kit
-
+* HTML
+* Javascript
+* NodeJS
+* Android Development Kit
 ## Projects

@@ -88,5 +88,4 @@ Finally, I attended an event at Google's headquarters in Mountain View that incl
 * Java Multithreading
 * Trunk-based development
 * Unit testing
-#### Code
-<a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>
+#### Repository: <a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>

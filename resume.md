@@ -30,20 +30,10 @@ The problem that I am working on shows up when AMDPs are used online. Each sub-t
 
 As an analogy, I will use the task of going out for dinner. This can be broken down into such sub-tasks as "go to car", "drive to restaurant X", and "eat dinner". An offline usage of an AMDP would simply result in all of the steps needed to reach the car, how to drive to the restaurant, and how to eat. An online usage, however, would result in a system that tells you what to do step-by-step until you are done with your meal. A problem would arise if you decided on your way to restaurant X that you wanted to go to restaurant Y instead. Under the current system, you would be directed all the way to restaurant X before the AMDP realizes that you need to be taken to restaurant Y and then takes you there. My work is focused on fixing this problem so that as soon as you changed your mind, you are navigated to restaurant Y rather than needing to backtrack for no reason.
 
-### Google CodeU - Career Development Program
-I participated in Google's CodeU career development program in the spring of 2017.
+The codebases that I am working from:
+<a href="https://github.com/cqdinh/amdp-replanning">github.com/cqdinh/amdp-replanning</a>
+<a href="https://github.com/cqdinh/Maple-RAMDP">github.com/cqdinh/Maple-RAMDP</a>
 
-The primary focus of the program was a group project where I worked in a team with two other students to implement new features for a basic chat application that we were given in Java. Throughout the program, we had several code reviews with a Google engineer who acted as our project advisor, which helped me improve my knowledge of industry best practices such as unit testing and trunk-based development.
-
-One of the features that I worked on was update polling. The original chat app didn't update the messages on-screen until the user manually requested them, which made it nearly unusable. To fix this, I used Java multithreading to update the messages every second as an interrupt-based updating scheme would require rewriting significant portions of the chat server implementation.
-
-I also worked on making the chat server persistent across tests. Initially, all data was lost when the server shut down because it didn't have any mechanism for data storage. In the end, I used Java's JDBC database access system to store the chat data in an SQLite database and retrieve it on server startup.
-
-In addition to this group project, I attended YouTube Live Career Series talks, which were livestreams hosted by Google recruiters and engineers covering industry and carrer preparation topics. Several mock interviews were also conducted in order to give participants in CodeU extra interview experience and feedback from people who conduct those interviews regularly.
-
-Finally, I attended an event at Google's headquarters in Mountain View that included some of the talks and exercises that are used to introduce new Google employees to the company as well as talks geared more explicitly towards students. Along with these talks, we were given time to network with Google employees who worked to create CodeU and with our fellow students.
-#### Skills Learned
-* Java Database Access
 ### MantaroBot Corporation - Summer Internship
 I interned at the MantaroBot Corporation in Germantown over the summers of 2014, 2015, 2016, and 2017.
 #### Summer 2017
@@ -80,3 +70,23 @@ I implemented Pusher and WebRTC as additional methods by which commands from the
 * NodeJS
 * Android Development Kit
 ## Projects
+
+### Google CodeU - Career Development Program
+I participated in Google's CodeU career development program in the spring of 2017.
+
+The primary focus of the program was a group project where I worked in a team with two other students to implement new features for a basic chat application that we were given in Java. Throughout the program, we had several code reviews with a Google engineer who acted as our project advisor, which helped me improve my knowledge of industry best practices such as unit testing and trunk-based development.
+
+One of the features that I worked on was update polling. The original chat app didn't update the messages on-screen until the user manually requested them, which made it nearly unusable. To fix this, I used Java multithreading to update the messages every second as an interrupt-based updating scheme would require rewriting significant portions of the chat server implementation.
+
+I also worked on making the chat server persistent across tests. Initially, all data was lost when the server shut down because it didn't have any mechanism for data storage. In the end, I used Java's JDBC database access system to store the chat data in an SQLite database and retrieve it on server startup.
+
+In addition to this group project, I attended YouTube Live Career Series talks, which were livestreams hosted by Google recruiters and engineers covering industry and carrer preparation topics. Several mock interviews were also conducted in order to give participants in CodeU extra interview experience and feedback from people who conduct those interviews regularly.
+
+Finally, I attended an event at Google's headquarters in Mountain View that included some of the talks and exercises that are used to introduce new Google employees to the company as well as talks geared more explicitly towards students. Along with these talks, we were given time to network with Google employees who worked to create CodeU and with our fellow students.
+#### Skills Learned
+* Java Database Access
+* Java Multithreading
+* Trunk-based development
+* Unit testing
+#### Code
+<a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>

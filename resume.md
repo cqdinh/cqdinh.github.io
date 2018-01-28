@@ -109,7 +109,7 @@ I used <a href="https://hardikbansal.github.io/CycleGANBlog/">Hardik Bansal's tu
 * Generative Adversarial Networks
 #### Repository: <a href="https://github.com/cqdinh/TensorflowCycleGAN">github.com/cqdinh/TensorflowCycleGAN</a>
 ### Kaggle Competition: Corporación Favorita Grocery Sales Forecasting
-For the Intro to Data Science class that I took in Fall 2017, I created a model for the <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Corporación Favorita Grocery Sales Forecasting that was evaluated to have an error of 1.067 as measured by Normalized Weighted Root Mean Squared Logarithmic Error. Normalized Weighted Root Mean Squared Logarithmic Error
+For the Intro to Data Science class that I took in Fall 2017, I created a model for the <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Corporación Favorita Grocery Sales Forecasting</a> that was evaluated to have an error of 1.067 as measured by Normalized Weighted Root Mean Squared Logarithmic Error. Normalized Weighted Root Mean Squared Logarithmic Error
 
 $$ NWRMSLE=\sqrt{\frac{\sum_{i=1}^n\left(w_i\left(\ln\left(y_i+1\right)-\ln\left(Y_i+1\right)\right)^2\right)}{\sum_{i=1}^nw_i}}$$
 #### Skills Learned

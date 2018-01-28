@@ -109,9 +109,9 @@ I used <a href="https://hardikbansal.github.io/CycleGANBlog/">Hardik Bansal's tu
 * Generative Adversarial Networks
 #### Repository: <a href="https://github.com/cqdinh/TensorflowCycleGAN">github.com/cqdinh/TensorflowCycleGAN</a>
 ### Kaggle Competition: Corporación Favorita Grocery Sales Forecasting
-For the Intro to Data Science class that I took in Fall 2017, I created a model for the <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Corporación Favorita Grocery Sales Forecasting</a> that was evaluated to have an error of 1.067 as measured by Normalized Weighted Root Mean Squared Logarithmic Error. Normalized Weighted Root Mean Squared Logarithmic Error
+For the Intro to Data Science class that I took in Fall 2017, I created a model for the <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Corporación Favorita Grocery Sales Forecasting</a> that was evaluated to have an error of 1.067 as measured by <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting#evaluation">Normalized Weighted Root Mean Squared Logarithmic Error</a>.
 
-$$ NWRMSLE=\sqrt{\frac{\sum_{i=1}^n\left(w_i\left(\ln\left(y_i+1\right)-\ln\left(Y_i+1\right)\right)^2\right)}{\sum_{i=1}^nw_i}}$$
+The competition's challenge is to forecast sales of individual products given past sales data. The main challenge that I found in this challenge was to manipulate the data into a form that could be processed in reasonable time. Because there was so much data, I had to essentially discard some of the information provided as part of the challenge. As a result, my model was not nearly as accurate as it could have been.
 #### Skills Learned
 * Pandas
 * Scikit-Learn

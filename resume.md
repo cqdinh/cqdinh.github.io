@@ -89,3 +89,32 @@ Finally, I attended an event at Google's headquarters in Mountain View that incl
 * Trunk-based development
 * Unit testing
 #### Repository: <a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>
+### Sequence Generator
+A TensorFlow-based LSTM model that can be used to mimic a sequence of any form with a common input/output method for all data types.
+In essence, this is Andrej Karpathy's well-known char-rnn, modified to allow non-character inputs. 
+The RNN implementation is based on <a href="https://github.com/sherjilozair/char-rnn-tensorflow">char-rnn-tensorflow</a>, but packaged into a class and modified to allow the usage of any sequence of values that can be converted into integers.
+This implementation uses a modified LSTM class from TensorFlow to output the trained model in a simple text format, making cross-platform usage of the model simpler.
+My goal with this project was to better understand LSTMs and neural networks in general as well as to learn about how Tensorflow works.
+
+I trained a model on the collected works of Shakespeare and I have a demo of it <a href="https://cqdinh.github.io/projects/sequence_generator/">here</a>.
+#### Skills Learned
+* Tensorflow
+* LSTM architecture
+#### Repository: <a href="https://github.com/cqdinh/SequenceGenerator">github.com/cqdinh/SequenceGenerator</a>
+### CycleGAN
+I used <a href="https://hardikbansal.github.io/CycleGANBlog/">Hardik Bansal's tutorial</a> to implement the <a href="https://junyanz.github.io/CycleGAN/">CycleGAN</a> algorithm in Tensorflow. I tried to train a model using the sample dataset that would convert images of horses and zebras to each other, but while the cycle loss was effective at making the networks act as inverses of each other, the conversion from horse to zebra and vice versa was not successful.
+#### Skills Learned
+* Convolutional networks
+* TensorBoard - Graph View
+* Generative Adversarial Networks
+#### Repository: <a href="https://github.com/cqdinh/TensorflowCycleGAN">github.com/cqdinh/TensorflowCycleGAN</a>
+### Kaggle Competition: Corporación Favorita Grocery Sales Forecasting
+For the Intro to Data Science class that I took in Fall 2017, I created a model for the <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Corporación Favorita Grocery Sales Forecasting that was evaluated to have an error of 1.067 as measured by Normalized Weighted Root Mean Squared Logarithmic Error. Normalized Weighted Root Mean Squared Logarithmic Error
+
+$$ NWRMSLE=\sqrt{\frac{\sum_{i=1}^n\left(w_i\left(\ln\left(y_i+1\right)-\ln\left(Y_i+1\right)\right)^2\right)}{\sum_{i=1}^nw_i}}$$
+#### Skills Learned
+* Pandas
+* Scikit-Learn
+* Data Cleaning
+* Sampling
+#### Repository: <a href="https://github.com/cqdinh/kaggle_corporacion_favorita">github.com/cqdinh/kaggle_corporacion_favorita</a>

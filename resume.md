@@ -42,6 +42,7 @@ I designed and implemented an algorithm that uses OpenCV to find the robot's pos
 ##### Skills Learned
 * OpenCV
 * Computer Vision basics
+
 #### Summer 2016
 ##### Work Done
 I worked on prototyping a system using infrared sensors and transmitters to allow a robot to dock itself into its charging station. I used Arduino to control the sensors and transmitters along with Python to record and analyze the data that were produced. The prototype system was found to only be effective at very short range, which made it unsuitable for a docking system.
@@ -50,6 +51,7 @@ Later, I implemented algorithms that minimize the stress placed on the joints of
 ##### Skills Learned
 * C#
 * Model-based Optimization
+
 #### Summer 2015
 ##### Work Done
 I worked on using an Asus XTION to imitate LIDAR-based robotic wall detection and avoidance. I used Octave, a free equivalent to MatLab, as well as NumPy and MatPlotLib to analyze and visualize data that was collected from the sensor. In addition, I used NumPy and MatPlotlib to prototype the detection and avoidance algorithms. 
@@ -61,6 +63,7 @@ The final result was an algorithm that used variance to cluster data points into
 * MatPlotLib
 * Noise Reduction techniques
 * Basic Clustering
+
 #### Summer 2014
 ##### Work Done
 I implemented Pusher and WebRTC as additional methods by which commands from the <a href="http://www.mantarobot.com/telego/">TeleGo Controller</a> could reach the <a href="https://play.google.com/store/apps/details?id=com.mantaro.telemerobotappv3&hl=en">TeleMe Robot App</a>, which would relay those commands to the robot's motor controllers and other hardware. Pusher was implemented entirely in Java using the Android Development Kit, while WebRTC required HTML and Javascript as well as NodeJS for a server that was used to set up the peer-to-peer connection.
@@ -69,6 +72,7 @@ I implemented Pusher and WebRTC as additional methods by which commands from the
 * Javascript
 * NodeJS
 * Android Development Kit
+
 ## Projects
 
 ### Google CodeU - Career Development Program
@@ -88,7 +92,9 @@ Finally, I attended an event at Google's headquarters in Mountain View that incl
 * Java Multithreading
 * Trunk-based development
 * Unit testing
+
 #### Repository: <a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>
+
 ### Sequence Generator
 A TensorFlow-based LSTM model that can be used to mimic a sequence of any form with a common input/output method for all data types.
 In essence, this is Andrej Karpathy's well-known char-rnn, modified to allow non-character inputs. 
@@ -100,14 +106,18 @@ I trained a model on the collected works of Shakespeare and I have a demo of it 
 #### Skills Learned
 * Tensorflow
 * LSTM architecture
+
 #### Repository: <a href="https://github.com/cqdinh/SequenceGenerator">github.com/cqdinh/SequenceGenerator</a>
+
 ### CycleGAN
 I used <a href="https://hardikbansal.github.io/CycleGANBlog/">Hardik Bansal's tutorial</a> to implement the <a href="https://junyanz.github.io/CycleGAN/">CycleGAN</a> algorithm in Tensorflow. I tried to train a model using the sample dataset that would convert images of horses and zebras to each other, but while the cycle loss was effective at making the networks act as inverses of each other, the conversion from horse to zebra and vice versa was not successful.
 #### Skills Learned
 * Convolutional networks
 * TensorBoard - Graph View
 * Generative Adversarial Networks
+
 #### Repository: <a href="https://github.com/cqdinh/TensorflowCycleGAN">github.com/cqdinh/TensorflowCycleGAN</a>
+
 ### Kaggle Competition: Corporación Favorita Grocery Sales Forecasting
 For the Intro to Data Science class that I took in Fall 2017, I created a model for the <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Corporación Favorita Grocery Sales Forecasting</a> that was evaluated to have an error of 1.067 as measured by <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting#evaluation">Normalized Weighted Root Mean Squared Logarithmic Error</a>.
 
@@ -117,4 +127,5 @@ The competition's challenge is to forecast sales of individual products given pa
 * Scikit-Learn
 * Data Cleaning
 * Sampling
+
 #### Repository: <a href="https://github.com/cqdinh/kaggle_corporacion_favorita">github.com/cqdinh/kaggle_corporacion_favorita</a>

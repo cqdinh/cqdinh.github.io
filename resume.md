@@ -42,7 +42,7 @@ The codebases that I worked from:
 * <a href="https://github.com/cqdinh/amdp-replanning">github.com/cqdinh/amdp-replanning</a>
 * <a href="https://github.com/cqdinh/Maple-RAMDP">github.com/cqdinh/Maple-RAMDP</a>
 
-####Skills Learned
+#### Skills Learned
 * Research
 * Reinforcement Learning
 * Planning

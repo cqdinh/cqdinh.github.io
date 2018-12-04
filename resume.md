@@ -23,7 +23,6 @@ President's List 2017-2018
 ## Experience
 ### IBM Cloud Managed Application Services, Rochester, MN - Software Internship
 #### Summer 2018
-##### Work Done
 The team that I worked on was focused on building SAP systems for various clients. I used Node.js, Javascript, d3.js, PUG, and CSS to design and implement a Gantt chart visualization of the build process. It uses stored log data to determine when each step was worked on and how long it took. Using that information, it uses d3.js to render a chart that the user can view at different points and scales. 
 ##### Skills Learned
 * Javascript
@@ -32,7 +31,6 @@ The team that I worked on was focused on building SAP systems for various client
 
 ### UMBC's MAPLE Lab - Undergraduate Research
 #### Fall 2017 - Spring 2018
-##### Work Done
 In the Multi-Agent Planning and Learning (MAPLE) lab at the University of Maryland Baltimore County (UMBC), I worked on the problem of replanning in a hierarchical planning framwork called an Abstract Markov Decision Process (AMDP). This framework simplifies tasks by splitting them up into subtasks that ignore parts of the state space. This allows the agent to make plans without needing to take unnecessary information into account. However, it makes replanning difficult because some state variables are ignored based on an expectation that they will be constant while the subtask is executed. The subtask should replan when that expectation is violated, but it doesnt't because it has ignored that part of the state. 
 
 My solution was a "controller" that sees the whole state space and forces the agent to replan when it ignores any state change. While this solved the initial problem, there are other failure cases for AMDPs such as a failure to account for unexpected changes in state variables that the agent is aware of.
@@ -50,14 +48,12 @@ The codebases that I worked from:
 ### MantaroBot Corporation - Summer Internship
 I interned at the MantaroBot Corporation in Germantown over the summers of 2014, 2015, 2016, and 2017.
 #### Summer 2017
-##### Work Done
 I designed and implemented an algorithm that uses OpenCV to find the robot's position relative to a marker placed on its charging dock. Based on this position, the robot can then dock itself for charging automatically. The marker is made up of three triangles which are key to the algorithm. First, the algorithm finds a group of triangles that match the overall profile of the marker image. Once the triangles are found, their sizes and relative positions are used to determine how far away the marker is and its angle relative to the robot. To dock, the robot uses its mecanum wheels to move sideways and rotate so that it is directly in front of the charging station and can then simply move straight forward to dock. I used the Python version of OpenCV to speed up development of the marker detection algorithm and then used a C# wrapper of OpenCV to integrate it into the Windows controller app.
 ##### Skills Learned
 * OpenCV
 * Computer Vision basics
 
 #### Summer 2016
-##### Work Done
 I worked on prototyping a system using infrared sensors and transmitters to allow a robot to dock itself into its charging station. I used Arduino to control the sensors and transmitters along with Python to record and analyze the data that were produced. The prototype system was found to only be effective at very short range, which made it unsuitable for a docking system.
 
 Later, I implemented algorithms that minimize the stress placed on the joints of a robotic arm. There was an extra degree of freedom in the arm's movement, so I worked through the forwards kinematics and torque equations in order to determine how to position the arm given an endpoint to move to. However, based on a map of the stress on the arm that I created in MatPlotLib, I found that larger movements could not be performed reliably by moving in a straight line and a pathing algorithm was needed. In order to minimize the stress experienced throughout the path, I developed a system that determines what direction to move in at each step based on gradient descent. Both of these algorithms were prototyped in Python with NumPy and MatPlotLib and then implemented in C# as part of a Windows App that controls the robot.
@@ -66,7 +62,6 @@ Later, I implemented algorithms that minimize the stress placed on the joints of
 * Model-based Optimization
 
 #### Summer 2015
-##### Work Done
 I worked on using an Asus XTION to imitate LIDAR-based robotic wall detection and avoidance. I used Octave, a free equivalent to MatLab, as well as NumPy and MatPlotLib to analyze and visualize data that was collected from the sensor. In addition, I used NumPy and MatPlotlib to prototype the detection and avoidance algorithms. 
 
 The final result was an algorithm that used variance to cluster data points into groups that indicate the existence of a wall. Using these groups, least-squares regressions calculate the location of the wall that each group represents while reducing noise. Finally, the robot's movements are biased towards avoiding walls by finding the nearest wall and moving away from it if necessary and parallel to it otherwise.
@@ -78,7 +73,6 @@ The final result was an algorithm that used variance to cluster data points into
 * Basic Clustering
 
 #### Summer 2014
-##### Work Done
 I implemented Pusher and WebRTC as additional methods by which commands from the <a href="http://www.mantarobot.com/telego/">TeleGo Controller</a> could reach the <a href="https://play.google.com/store/apps/details?id=com.mantaro.telemerobotappv3&hl=en">TeleMe Robot App</a>, which would relay those commands to the robot's motor controllers and other hardware. Pusher was implemented entirely in Java using the Android Development Kit, while WebRTC required HTML and Javascript as well as NodeJS for a server that was used to set up the peer-to-peer connection.
 ##### Skills Learned
 * HTML

@@ -21,9 +21,8 @@ Merit Scholar
 
 President's List 2017-2018
 ## Experience
-### IBM Cloud Managed Application Services - Software Internship
+### IBM Cloud Managed Application Services, Rochester, MN - Software Internship
 #### Summer 2018
-#### Rochester, Minnesota
 ##### Work Done
 The team that I worked on was focused on building SAP systems for various clients. I used Node.js, Javascript, d3.js, PUG, and CSS to design and implement a Gantt chart visualization of the build process. It uses stored log data to determine when each step was worked on and how long it took. Using that information, it uses d3.js to render a chart that the user can view at different points and scales. 
 ##### Skills Learned

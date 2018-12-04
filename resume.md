@@ -13,26 +13,40 @@ BS in Mathematics
 #### Grade Point Average
 4.0 in Computer Science Courses
 
-3.82 in Mathematics Courses
+3.889 in Mathematics Courses
 
-3.718 Overall
+3.771 Overall
 #### Honors
 Merit Scholar
 
-Dean's List
+President's List 2017-2018
 ## Experience
+### IBM Cloud Managed Application Services - Software Internship
+#### Summer 2018
+#### Rochester, Minnesota
+##### Work Done
+The team that I worked on was focused on building SAP systems for various clients. I used Node.js, Javascript, d3.js, PUG, and CSS to design and implement a Gantt chart visualization of the build process. It uses stored log data to determine when each step was worked on and how long it took. Using that information, it uses d3.js to render a chart that the user can view at different points and scales. 
+##### Skills Learned
+* Javascript
+* d3.js
+* node.js
+
 ### UMBC's MAPLE Lab - Undergraduate Research
-I am currently working on the problem of replanning in Abstract Markov Decision Processes (AMDPs) in the Multi-Agent Planning and Learning (MAPLE) lab at the University of Maryland Baltimore County (UMBC). 
+#### Fall 2017 - Spring 2018
+##### Work Done
+In the Multi-Agent Planning and Learning (MAPLE) lab at the University of Maryland Baltimore County (UMBC), I worked on the problem of replanning in a hierarchical planning framwork called an Abstract Markov Decision Process (AMDP). This framework simplifies tasks by splitting them up into subtasks that ignore parts of the state space. This allows the agent to make plans without needing to take unnecessary information into account. However, it makes replanning difficult because some state variables are ignored based on an expectation that they will be constant while the subtask is executed. The subtask should replan when that expectation is violated, but it doesnt't because it has ignored that part of the state. 
 
-AMDPs are a hierarchical planning system, so it takes some task and breaks it down into several sub-tasks to make it easier to solve. Each task then determines how to arrange those sub-tasks so that it can achieve its goal. This is done until the task to solve is more easily solved with a traditional algorithm such as A\* for pathing. This system can either be used online, meaning that as each step is determined, it is carried out, or offline, meaning that the plan is generated but not necessarily acted on.
+My solution was a "controller" that sees the whole state space and forces the agent to replan when it ignores any state change. While this solved the initial problem, there are other failure cases for AMDPs such as a failure to account for unexpected changes in state variables that the agent is aware of.
 
-The problem that I am working on shows up when AMDPs are used online. Each sub-task is self-contained and only given the information necessary to reach its goal, so it doesn't always have enough information to determine when something has gone wrong and it is doing something incorrect. As a result, the task reaches its goal and then needs to be performed again since it went wrong the first time.
-
-As an analogy, I will use the task of going out for dinner. This can be broken down into such sub-tasks as "go to car", "drive to restaurant X", and "eat dinner". An offline usage of an AMDP would simply result in all of the steps needed to reach the car, how to drive to the restaurant, and how to eat. An online usage, however, would result in a system that tells you what to do step-by-step until you are done with your meal. A problem would arise if you decided on your way to restaurant X that you wanted to go to restaurant Y instead. Under the current system, you would be directed all the way to restaurant X before the AMDP realizes that you need to be taken to restaurant Y and then takes you there. My work is focused on fixing this problem so that as soon as you changed your mind, you are navigated to restaurant Y rather than needing to backtrack for no reason.
-
-The codebases that I am working from:
+The codebases that I worked from:
 * <a href="https://github.com/cqdinh/amdp-replanning">github.com/cqdinh/amdp-replanning</a>
 * <a href="https://github.com/cqdinh/Maple-RAMDP">github.com/cqdinh/Maple-RAMDP</a>
+
+####Skills Learned
+* Research
+* Reinforcement Learning
+* Planning
+* Latex
 
 ### MantaroBot Corporation - Summer Internship
 I interned at the MantaroBot Corporation in Germantown over the summers of 2014, 2015, 2016, and 2017.
@@ -95,12 +109,21 @@ Finally, I attended an event at Google's headquarters in Mountain View that incl
 
 #### Repository: <a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>
 
+### Homography Invariance of CapsNet
+For my Computer Vision course project, I implemented CapsNet and compared its homography invariance to that of a basic ConvNet with an architecture based on CapsNet but without the Capsules structure. I trained and evaluated both based on their classification accuracy on randomly tranformed logos as well as those logos placed on random backgrounds. After training both, I found that the CapsNet reached 73% accuracy on the logos without backgrounds while the ConvNet only managed 18%. 
+
+#### Skills Learned
+* PyTorch
+* Capsule architecture
+
+#### Repository: <a href="https://github.com/cqdinh/Pytorch-CapsNet">github.com/cqdinh/Pytorch-CapsNet</a>
+
+
 ### Sequence Generator
 A TensorFlow-based LSTM model that can be used to mimic a sequence of any form with a common input/output method for all data types.
 In essence, this is Andrej Karpathy's well-known char-rnn, modified to allow non-character inputs. 
 The RNN implementation is based on <a href="https://github.com/sherjilozair/char-rnn-tensorflow">char-rnn-tensorflow</a>, but packaged into a class and modified to allow the usage of any sequence of values that can be converted into integers.
 This implementation uses a modified LSTM class from TensorFlow to output the trained model in a simple text format, making cross-platform usage of the model simpler.
-My goal with this project was to better understand LSTMs and neural networks in general as well as to learn about how Tensorflow works.
 
 I trained a model on the collected works of Shakespeare and I have a demo of it <a href="https://cqdinh.github.io/projects/sequence_generator/">here</a>.
 #### Skills Learned

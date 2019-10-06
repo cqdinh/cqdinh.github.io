@@ -4,26 +4,22 @@ title: Christopher Dinh
 subtitle: 
 ---
 ## Education
+### University of California, Irvine
+#### Master of Computer Science
+Expected Graduation: December 2020
+
 ### University of Maryland - Baltimore County
-Expected Graduation: Spring 2019
-#### Degrees
-BS in Computer Science - Data Science Track
+**BS in Computer Science** - *Data Science Track*, Major GPA 4.0
 
-BS in Mathematics
-#### Grade Point Average
-4.0 in Computer Science Courses
+**BS in Mathematics**, Major GPA 3.9
 
-3.889 in Mathematics Courses
+Graduated *magna cum laude* in Spring 2019 - Cumulative GPA 3.8
 
-3.771 Overall
-#### Honors
-Merit Scholar
-
-President's List 2017-2018
 ## Experience
 ### IBM Cloud Managed Application Services, Rochester, MN - Software Internship
 #### Summer 2018
-The team that I worked on was focused on building SAP systems for various clients. I used Node.js, Javascript, d3.js, PUG, and CSS to design and implement a Gantt chart visualization of the build process. It uses stored log data to determine when each step was worked on and how long it took. Using that information, it uses d3.js to render a chart that the user can view at different points and scales. 
+I enabled SAP build teams to track their progress and find bottlenecks by designing and implementing a Gantt chart visualization of the SAP build process using node.js, Javascript, d3.js, PUG, and CSS. Stored log data is read from a Java server and rendered using d3.js. Since there may be a large number of steps and some are automated while others are manual, I implemented custom zoom and pan functionality to allow the user to view subsets of the processes at varying timescales.
+
 ##### Skills Learned
 * Javascript
 * d3.js

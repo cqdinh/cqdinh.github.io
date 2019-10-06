@@ -23,25 +23,6 @@ For my Computer Vision course project, I implemented CapsNet and compared its ho
 
 ##### Repository: <a href="https://github.com/cqdinh/Pytorch-CapsNet">github.com/cqdinh/Pytorch-CapsNet</a>
 
-#### Google CodeU
-I participated in Google's CodeU program in the spring of 2017.
-
-The primary focus of the program was a group project where I worked in a team with two other students to implement new features for a basic chat application that we were given in Java. Throughout the program, we had several code reviews with a Google engineer who acted as our project advisor, which helped me improve my knowledge of industry best practices such as unit testing and trunk-based development.
-
-One of the features that I worked on was update polling. The original chat app didn't update the messages on-screen until the user manually requested them, which made it nearly unusable. To fix this, I used Java multithreading to update the messages every second as an interrupt-based updating scheme would require rewriting significant portions of the chat server implementation.
-
-I also worked on making the chat server persistent across tests. Initially, all data was lost when the server shut down because it didn't have any mechanism for data storage. In the end, I used Java's JDBC database access system to store the chat data in an SQLite database and retrieve it on server startup.
-
-Finally, I attended an event at Google's headquarters in Mountain View that included some of the talks and exercises that are used to introduce new Google employees to the company as well as talks geared more explicitly towards students.
-##### Skills Learned
-* Java Database Access (JDBC)
-* SQLite
-* Java Multithreading
-* Trunk-based development
-* Unit testing
-
-##### Repository: <a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>
-
 #### CycleGAN Implementation
 I used <a href="https://hardikbansal.github.io/CycleGANBlog/">Hardik Bansal's tutorial</a> to implement the <a href="https://junyanz.github.io/CycleGAN/">CycleGAN</a> algorithm in Tensorflow. I tried to train a model using the sample dataset that would convert images of horses and zebras to each other, but while the cycle loss was effective at making the networks act as inverses of each other, the conversion from horse to zebra and vice versa was not successful.
 ##### Skills Learned
@@ -78,3 +59,33 @@ I trained a model on the collected works of Shakespeare and I have a demo of it 
 ##### Repository: <a href="https://github.com/cqdinh/SequenceGenerator">github.com/cqdinh/SequenceGenerator</a>
 
 ### Other
+
+#### Google CodeU
+I participated in Google's CodeU program in the spring of 2017.
+
+The primary focus of the program was a group project where I worked in a team with two other students to implement new features for a basic chat application that we were given in Java. Throughout the program, we had several code reviews with a Google engineer who acted as our project advisor, which helped me improve my knowledge of industry best practices such as unit testing and trunk-based development.
+
+One of the features that I worked on was update polling. The original chat app didn't update the messages on-screen until the user manually requested them, which made it nearly unusable. To fix this, I used Java multithreading to update the messages every second as an interrupt-based updating scheme would require rewriting significant portions of the chat server implementation.
+
+I also worked on making the chat server persistent across tests. Initially, all data was lost when the server shut down because it didn't have any mechanism for data storage. In the end, I used Java's JDBC database access system to store the chat data in an SQLite database and retrieve it on server startup.
+
+Finally, I attended an event at Google's headquarters in Mountain View that included some of the talks and exercises that are used to introduce new Google employees to the company as well as talks geared more explicitly towards students.
+##### Skills Learned
+* Java Database Access (JDBC)
+* SQLite
+* Java Multithreading
+* Trunk-based development
+* Unit testing
+
+##### Repository: <a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>
+
+#### Health Professional Time Scheduling
+For my Software Engineering course, I worked in a team of 5 to develop a desktop application that generates a shift schedule for doctors and nurses subject to various constraints. The Frontend GUI is built in Electron and Vue and when generating the schedule, it calls a Java backend that uses Optaplanner to generate the schedule.
+
+##### Skills Learned
+* UML
+* Agile
+* Maven
+* Constraint Definition
+
+##### Repository: <a href="https://github.com/philliard3/CMSC447-application">github.com/philliard3/CMSC447-application</a>

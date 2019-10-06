@@ -18,12 +18,13 @@ Graduated *magna cum laude* in Spring 2019 - Cumulative GPA 3.8
 ## Experience
 ### IBM Cloud Managed Application Services, Rochester, MN - Software Internship
 #### Summer 2018
-I enabled SAP build teams to track their progress and find bottlenecks by designing and implementing a Gantt chart visualization of the SAP build process using node.js, Javascript, d3.js, PUG, and CSS. Stored log data is read from a Java server and rendered using d3.js. Since there may be a large number of steps and some are automated while others are manual, I implemented custom zoom and pan functionality to allow the user to view subsets of the processes at varying timescales.
+I enabled SAP build teams to track their progress and find bottlenecks by designing and implementing a Gantt chart visualization of the SAP build process using node.js, Javascript, d3.js, PUG, and CSS. Stored log data is read from a Java server and rendered using d3.js. Since there may be a large number of steps and some are automated while others are manual, I implemented custom zoom and pan functionality to allow the user to view subsets of the processes at varying timescales. As part of my internship, I learned Agile practices by participating in regular team meetings and frequently getting feedback from the people on my team who would be using the visualization I created.
 
 ##### Skills Learned
 * Javascript
 * d3.js
 * node.js
+* Agile
 
 ### UMBC Multi-Agent Planning and Learning Lab - Undergraduate Research
 #### Fall 2017 - Spring 2018
@@ -82,14 +83,26 @@ I reduced control latency for a telepresence robot by an average of 50% by imple
 * Android Development Kit
 
 ## Projects
+### Health Professional Time Scheduling
+For my Software Engineering course, I worked in a team of 5 to develop a desktop application that generates a shift schedule for doctors and nurses subject to various constraints. The Frontend GUI is built in Electron and Vue and when generating the schedule, it calls a Java backend that uses Optaplanner to generate the schedule.
+
+#### Skills Learned
+* UML
+* Agile
+* Maven
+* Constraint Definition
+
+#### Repository: <a href="https://github.com/philliard3/CMSC447-application">github.com/philliard3/CMSC447-application</a>
+
+
 ### Inferring Ingredient Relationships from Recipes
 For my Natural Language Processing course project, I used a recipe dataset to generate embeddings for ingredients. Just as a sentence can be seen as the context for a word, I used the recipes as contexts for the ingredients. As a baseline, I started with the co-occurrence matrix and then reduced its size with PCA. From there, I generated embeddings with a Continuous Bag-of-words model modified to use the entire ingredient list as context because the ingredient list doesn't have any meaningful order. 
 
 #### Skills Learned
 * PyTorch
-* Capsule architecture
+* Word Embeddings
 
-#### Repository: <a href="https://github.com/cqdinh/Pytorch-CapsNet">github.com/cqdinh/Pytorch-CapsNet</a>
+#### Repository: <a href="https://github.com/cqdinh/Ingredient_Embeddings">github.com/cqdinh/Ingredient_Embeddings</a>
 
 ### Homography Invariance of CapsNet vs ConvNet
 For my Computer Vision course project, I implemented CapsNet and compared its homography invariance to that of a basic ConvNet with an architecture based on CapsNet but without the Capsules structure. I trained and evaluated both based on their classification accuracy on randomly tranformed logos as well as those logos placed on random backgrounds. After training both, I found that the CapsNet reached 73% accuracy on the logos without backgrounds while the ConvNet only managed 18%. 

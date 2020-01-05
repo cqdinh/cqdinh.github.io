@@ -14,6 +14,8 @@ For my Natural Language Processing course project, I used a recipe dataset to ge
 
 ##### Repository: <a href="https://github.com/cqdinh/Pytorch-CapsNet">github.com/cqdinh/Pytorch-CapsNet</a>
 
+
+
 #### Homography Invariance of CapsNet vs ConvNet
 For my Computer Vision course project, I implemented CapsNet and compared its homography invariance to that of a basic ConvNet with an architecture based on CapsNet but without the Capsules structure. I trained and evaluated both based on their classification accuracy on randomly tranformed logos as well as those logos placed on random backgrounds. After training both, I found that the CapsNet reached 73% accuracy on the logos without backgrounds while the ConvNet only managed 18%. 
 
@@ -23,6 +25,8 @@ For my Computer Vision course project, I implemented CapsNet and compared its ho
 
 ##### Repository: <a href="https://github.com/cqdinh/Pytorch-CapsNet">github.com/cqdinh/Pytorch-CapsNet</a>
 
+
+
 #### CycleGAN Implementation
 I used <a href="https://hardikbansal.github.io/CycleGANBlog/">Hardik Bansal's tutorial</a> to implement the <a href="https://junyanz.github.io/CycleGAN/">CycleGAN</a> algorithm in Tensorflow. I tried to train a model using the sample dataset that would convert images of horses and zebras to each other, but while the cycle loss was effective at making the networks act as inverses of each other, the conversion from horse to zebra and vice versa was not successful.
 ##### Skills Learned
@@ -31,6 +35,8 @@ I used <a href="https://hardikbansal.github.io/CycleGANBlog/">Hardik Bansal's tu
 * Generative Adversarial Networks
 
 ##### Repository: <a href="https://github.com/cqdinh/TensorflowCycleGAN">github.com/cqdinh/TensorflowCycleGAN</a>
+
+
 
 #### Kaggle Competition: Corporación Favorita Grocery Sales Forecasting
 For the Intro to Data Science class that I took in Fall 2017, I created a model for the <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Corporación Favorita Grocery Sales Forecasting</a> that was evaluated to have an error of 1.067 as measured by <a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting#evaluation">Normalized Weighted Root Mean Squared Logarithmic Error</a>.
@@ -45,6 +51,8 @@ The competition's challenge is to forecast sales of individual products given pa
 
 ##### Repository: <a href="https://github.com/cqdinh/kaggle_corporacion_favorita">github.com/cqdinh/kaggle_corporacion_favorita</a>
 
+
+
 #### Sequence Generator
 A TensorFlow-based LSTM model that can be used to mimic a sequence of any form with a common input/output method for all data types.
 In essence, this is Andrej Karpathy's well-known char-rnn, modified to allow non-character inputs. 
@@ -57,6 +65,8 @@ I trained a model on the collected works of Shakespeare and I have a demo of it 
 * LSTM architecture
 
 ##### Repository: <a href="https://github.com/cqdinh/SequenceGenerator">github.com/cqdinh/SequenceGenerator</a>
+
+
 
 ### Other
 
@@ -78,6 +88,8 @@ Finally, I attended an event at Google's headquarters in Mountain View that incl
 * Unit testing
 
 ##### Repository: <a href="https://github.com/cqdinh/codeu_project_2017">github.com/cqdinh/codeu_project_2017</a>
+
+
 
 #### Health Professional Time Scheduling
 For my Software Engineering course, I worked in a team of 5 to develop a desktop application that generates a shift schedule for doctors and nurses subject to various constraints. The Frontend GUI is built in Electron and Vue and when generating the schedule, it calls a Java backend that uses Optaplanner to generate the schedule.

@@ -5,6 +5,18 @@ subtitle:
 ---
 ### AI / Data Science / ML
 
+#### Toxic Comment Classification
+For my Deep Learning course project, I built a deep learning model in PyTorch that determines if an online comment is toxic according to 6 different labels. To perform the classification, I built a custom head on top of BERT that uses an attention mechanism to process comments longer than BERT's 512-token limit. The model was trained and deployed on a Google Cloud Compute instance using a custom model server that is accessed by a Streamlit.io app. After training, the model achieved an average AUC of 0.959 across the 6 toxicity labels.
+
+##### Skills Learned
+* HuggingFace's transformers library
+* Kaggle API
+* Streamlit.io
+* Google Cloud Compute
+
+##### Repository: <a href="http://github.com/cqdinh/toxic_comment_classification_274P">github.com/cqdinh/toxic_comment_classification_274P</a>
+##### Kaggle: <a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/">Jigsaw Toxic Comment Classification</a>
+
 #### Inferring Ingredient Relationships from Recipes
 For my Natural Language Processing course project, I used a recipe dataset to generate embeddings for ingredients. Just as a sentence can be seen as the context for a word, I used the recipes as contexts for the ingredients. As a baseline, I started with the co-occurrence matrix and then reduced its size with PCA. From there, I generated embeddings with a Continuous Bag-of-words model modified to use the entire ingredient list as context because the ingredient list doesn't have any meaningful order. 
 

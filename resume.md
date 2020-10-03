@@ -16,6 +16,16 @@ Expected Graduation: December 2020
 Graduated *magna cum laude* in Spring 2019 - Cumulative GPA 3.8
 
 ## Experience
+### Swappit Co, Irvine, CA - ML Volunteer Project
+#### Summer 2020
+I designed and implemented a deep learning model from scratch to predict the aftermarket prices of sneakers based on real data. Initial model prototyping used Scikit-learn and PyTorch, but the final implementation uses Tensorflow and Keras for ease of deployment. After training on 60k training instances for 1000 epochs, the average difference between the model's predicted price and the true price is $56.
+
+
+##### Skills Learned
+* Tensorflow 2.0
+* Keras
+* Google Colab
+
 ### IBM Cloud Managed Application Services, Rochester, MN - Software Internship
 #### Summer 2018
 I enabled SAP build teams to track their progress and find bottlenecks by designing and implementing a Gantt chart visualization of the SAP build process using node.js, Javascript, d3.js, PUG, and CSS. Stored log data is read from a Java server and rendered using d3.js. Since there may be a large number of steps and some are automated while others are manual, I implemented custom zoom and pan functionality to allow the user to view subsets of the processes at varying timescales. As part of my internship, I learned Agile practices by participating in regular team meetings and frequently getting feedback from the people on my team who would be using the visualization I created.

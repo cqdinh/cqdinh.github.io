@@ -63,23 +63,6 @@ The competition's challenge is to forecast sales of individual products given pa
 
 ##### Repository: <a href="https://github.com/cqdinh/kaggle_corporacion_favorita">github.com/cqdinh/kaggle_corporacion_favorita</a>
 
-
-
-#### Sequence Generator
-A TensorFlow-based LSTM model that can be used to mimic a sequence of any form with a common input/output method for all data types.
-In essence, this is Andrej Karpathy's well-known char-rnn, modified to allow non-character inputs. 
-The RNN implementation is based on <a href="https://github.com/sherjilozair/char-rnn-tensorflow">char-rnn-tensorflow</a>, but packaged into a class and modified to allow the usage of any sequence of values that can be converted into integers.
-This implementation uses a modified LSTM class from TensorFlow to output the trained model in a simple text format, making cross-platform usage of the model simpler.
-
-I trained a model on the collected works of Shakespeare and I have a demo of it <a href="https://cqdinh.github.io/projects/sequence_generator/">here</a>.
-##### Skills Learned
-* Tensorflow
-* LSTM architecture
-
-##### Repository: <a href="https://github.com/cqdinh/SequenceGenerator">github.com/cqdinh/SequenceGenerator</a>
-
-
-
 ### Other
 
 #### Google CodeU

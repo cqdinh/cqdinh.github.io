@@ -8,6 +8,6 @@ When I have an idea, I try to make a point of actually implementing it to see wh
 
 ### Polynomial Residual Layer
 
-I look at a potential modification of residual connections to see how it effects a neural network's approximation power.
+I look at a potential modification of residual connections to see how it affects a neural network's approximation power.
 
 #### <a href="https://colab.research.google.com/drive/1Ikweeyz3PtRRc5R_NvzwUvXa7zZsa0HN?usp=sharing">Google Colab Notebook</a>

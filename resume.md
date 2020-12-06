@@ -17,11 +17,12 @@ Graduated *magna cum laude* in Spring 2019 - Cumulative GPA 3.8
 
 ## Experience
 ### Swappit Co, Irvine, CA - ML Volunteer Project
-#### Summer 2020
+#### June 2020 - Present
 I designed and implemented a deep learning model from scratch to predict the aftermarket prices of sneakers based on real data. Initial model prototyping used Scikit-learn and PyTorch, but the final implementation uses Tensorflow and Keras for ease of deployment. After training on 60k training instances for 1000 epochs, the average difference between the model's predicted price and the true price is $56.
 
+Currently, I'm developing a recommendation system using collaborative filtering.
 
-##### Skills Learned
+##### Skills Learned & Used
 * Tensorflow 2.0
 * Keras
 * Google Colab
@@ -93,6 +94,17 @@ I reduced control latency for a telepresence robot by an average of 50% by imple
 * Android Development Kit
 
 ## Projects
+### bartr
+As my capstone project for the MCS program, I'm working with two other students to develop a web application that allows users to trade items with each other.
+
+#### Skills Learned
+* MongoDB
+* Express
+* React
+* Node.js
+
+#### Repository: <a href="https://github.com/cqdinh/MCS-Capstone-Project-bartr">github.com/cqdinh/MCS-Capstone-Project-bartr</a>
+
 ### Toxic Comment Classification
 For my Deep Learning course project, I built a deep learning model in PyTorch that determines if an online comment is toxic according to 6 different labels. To perform the classification, I built a custom head on top of BERT that uses an attention mechanism to process comments longer than BERT's 512-token limit. The model was trained and deployed on a Google Cloud Compute instance using a custom model server that is accessed by a Streamlit.io app. After training, the model achieved an average AUC of 0.959 across the 6 toxicity labels.
 
@@ -101,6 +113,8 @@ For my Deep Learning course project, I built a deep learning model in PyTorch th
 * Kaggle API
 * Streamlit.io
 * Google Cloud Compute
+
+#### Google Drive Folder: <a href="https://drive.google.com/file/d/1xQF_f9MjqG9QTd5qDBWjp2qPHotOEVXj/view?usp=sharing">Neural Nets Final Project</a>
 
 ### Homography Invariance of CapsNet vs CNN
 For my Computer Vision course project, I implemented CapsNet and compared its homography invariance to that of a basic CNN with an architecture based on CapsNet but without the Capsules structure. I trained and evaluated both based on their classification accuracy on randomly tranformed logos as well as those logos placed on random backgrounds. After training both, I found that the CapsNet reached 73% accuracy on the logos without backgrounds while the CNN only managed 18%. 

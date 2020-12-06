@@ -9,4 +9,6 @@ In Spring 2019, I graduated *magna cum laude* from the University of Maryland - 
 See my projects <a href="https://cqdinh.github.io/projects#AI">here</a>
 
 ### Resume
-You can find my concise formal resume <a href="https://cqdinh.github.io/resume.pdf">here</a> and the more verbose online version <a href="https://cqdinh.github.io/resume">here</a>.
+Condensed single-page resume: <a href="https://cqdinh.github.io/one_page_resume.pdf">Link</a>
+Full formal resume: <a href="https://cqdinh.github.io/resume.pdf">Link</a>
+Verbose online resume: <a href="https://cqdinh.github.io/resume">Link</a>

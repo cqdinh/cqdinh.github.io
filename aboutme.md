@@ -10,5 +10,7 @@ See my projects <a href="https://cqdinh.github.io/projects#AI">here</a>
 
 ### Resume
 Condensed single-page resume: <a href="https://cqdinh.github.io/one_page_resume.pdf">Link</a>
+
 Full formal resume: <a href="https://cqdinh.github.io/resume.pdf">Link</a>
+
 Verbose online resume: <a href="https://cqdinh.github.io/resume">Link</a>
